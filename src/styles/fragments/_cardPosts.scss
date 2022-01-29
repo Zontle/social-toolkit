@@ -1,0 +1,41 @@
+.card-posts {
+  .username-publish-time {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .publish-time {
+    color: $sky_blue;
+  }
+
+  .content {
+    margin: 15px 0px 20px;
+
+    .post-files {
+      img {
+        border-radius: 10px;
+        margin: 10px;
+        width: 90%;
+      }
+    }
+  }
+
+  .username {
+    color: $pink;
+    font-size: 14px;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    button {
+      background: none;
+      border: 0;
+    }
+    .icon-menu {
+      button {
+        color: $sky_blue;
+      }
+    }
+  }
+}

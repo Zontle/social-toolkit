@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap");
+
+//Commons
+@import "commons/normalize";
+@import "commons/toolkit";
+@import "commons/config";
+
+//Fragments
+@import "fragments/card";
+@import "fragments/cardPosts";
+@import "fragments/menu";
+@import "fragments/postSection";
