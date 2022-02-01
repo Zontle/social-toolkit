@@ -6,17 +6,23 @@
   width: 100%;
 
   .container {
-    border-left: 2px solid #328bd2;
-    border-right: 2px solid #328bd2;
+    border-left: 2px solid $sky_blue;
+    border-right: 2px solid $sky_blue;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0 auto;
-    max-width: 500px;
-    overflow-x: hidden;
-    overflow-y: hidden;
     padding: 20px 16px 50px 16px;
-    width: 100%;
+
+    .top-post {
+      display: flex;
+      justify-content: space-between;
+      button {
+        background: none;
+        border: 0;
+        color: $pink;
+      }
+    }
   }
 }

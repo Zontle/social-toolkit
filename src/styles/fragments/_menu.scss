@@ -3,7 +3,7 @@
 
   .sidebar-navigation {
     align-items: center;
-    border-right: 3px solid #0f2b36;
+    border-right: 3px solid $dark_blue_opacity;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -12,8 +12,15 @@
 
     .top-sidebar {
       .detail-top-icon {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
         .icon {
-          padding: 15px 0 30px;
+          padding-top: 15px;
+        }
+        .wake {
+          border-bottom: 2px solid $sky_blue;
+          display: flex;
         }
       }
 
@@ -30,13 +37,21 @@
                 background-color: #328bd2;
                 border-radius: 50px;
 
-                img {
-                  filter: brightness(0%);
+                svg {
+                  path {
+                    fill: black;
+                  }
                 }
               }
             }
           }
         }
+      }
+    }
+    .bottom-sidebar{
+      .wake {
+        border-top: 2px solid $sky_blue;
+        display: flex;
       }
     }
   }
