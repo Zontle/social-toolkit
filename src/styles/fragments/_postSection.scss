@@ -6,8 +6,8 @@
   width: 100%;
 
   .container {
-    border-left: 2px solid $sky_blue;
-    border-right: 2px solid $sky_blue;
+    border-left: 2px solid #328bd2;
+    border-right: 2px solid #328bd2;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
       button {
         background: none;
         border: 0;
-        color: $pink;
+        color: #d33682;
       }
     }
   }
