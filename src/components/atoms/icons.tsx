@@ -1,4 +1,4 @@
-import { SizeProp } from "@fortawesome/fontawesome-svg-core";
+import { IconProp, SizeProp } from "@fortawesome/fontawesome-svg-core";
 import { faEllipsisH, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FunctionComponent, MouseEventHandler } from "react";
@@ -11,7 +11,7 @@ interface IconsProps {
 export const IconMenu: FunctionComponent<IconsProps> = ({ onClick }) => {
     return (
         <button onClick={onClick}>
-            <FontAwesomeIcon icon={faEllipsisH} />
+            <FontAwesomeIcon icon={faEllipsisH as IconProp} />
         </button>
     );
 };
@@ -19,7 +19,7 @@ export const IconMenu: FunctionComponent<IconsProps> = ({ onClick }) => {
 export const IconMenuPostSection: FunctionComponent<IconsProps> = ({ onClick, size }) => {
     return (
         <button onClick={onClick}>
-            <FontAwesomeIcon icon={faEllipsisV} size={size}/>
+            <FontAwesomeIcon icon={faEllipsisV as IconProp} size={size}/>
         </button>
     );
 };

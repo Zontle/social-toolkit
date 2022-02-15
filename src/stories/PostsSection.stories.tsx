@@ -18,6 +18,12 @@ const Template: ComponentStory<typeof PostsSection> = (args) => (
 export const PostSection = Template.bind({});
 PostSection.args = {
   children: (
-    <CardPosts user="" username="" files={[]} content="" publishTime="" />
+    <CardPosts
+      user="Cristian"
+      username="@cristian"
+      files={[]}
+      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
+      publishTime="now"
+    />
   ),
 };
