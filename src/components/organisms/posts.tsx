@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { SidebarBottomElements, SidebarCenterElements, SidebarTopElements, Wake } from "../../constants";
 import { CardPosts } from "../molecules/cardPosts";
 import { Menu } from "../molecules/menu";
 import { PostsSection } from "../molecules/postsSection";
@@ -7,7 +8,12 @@ interface PostsProps {}
 
 export const Posts: FunctionComponent<PostsProps> = () => {
   return (
-    <Menu>
+    <Menu
+      topIcons={SidebarTopElements}
+      centerIcons={SidebarCenterElements}
+      bottomIcons={SidebarBottomElements}
+      wake={Wake}
+    >
       <PostsSection title="Timeline">
         <CardPosts
           user="Cristian"
