@@ -1,8 +1,13 @@
-import { FunctionComponent } from "react";
-import { SidebarBottomElements, SidebarCenterElements, SidebarTopElements, Wake } from "../../constants";
-import { CardPosts } from "../molecules/cardPosts";
-import { Menu } from "../molecules/menu";
-import { PostsSection } from "../molecules/postsSection";
+import { FunctionComponent } from 'react';
+import {
+  SidebarBottomElements,
+  SidebarCenterElements,
+  SidebarTopElements,
+  Wake,
+} from '../../constants';
+import { CardPosts } from '../molecules/cardPosts';
+import { Menu } from '../molecules/menu';
+import { PostsSection } from '../molecules/postsSection';
 
 interface PostsProps {}
 
@@ -18,7 +23,7 @@ export const Posts: FunctionComponent<PostsProps> = () => {
         <CardPosts
           user="Cristian"
           username="CristianGO"
-          files={[]}
+          attachments={[]}
           content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
           publishTime="now"
         />

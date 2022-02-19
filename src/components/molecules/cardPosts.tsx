@@ -1,14 +1,19 @@
-import { FunctionComponent } from "react";
-import { CardMessageIcon } from "../../assets/icons/cardMessage";
-import { HeartIcon } from "../../assets/icons/heart";
-import { RetweetIcon } from "../../assets/icons/retweet";
-import { IconMenu } from "../atoms/icons";
-import { Card } from "./card";
+import { FunctionComponent } from 'react';
+import { CardMessageIcon } from '../../assets/icons/cardMessage';
+import { HeartIcon } from '../../assets/icons/heart';
+import { RetweetIcon } from '../../assets/icons/retweet';
+import { IconMenu } from '../atoms/icons';
+import { Card } from './card';
 
+interface Attachment {
+  url?: string;
+  type: string;
+  uid?: string;
+}
 interface CardPostsProps {
   user: string;
   username: string;
-  files?: Array<string>;
+  attachments?: Array<Attachment>;
   content: string;
   publishTime: string;
 }
@@ -16,10 +21,22 @@ interface CardPostsProps {
 export const CardPosts: FunctionComponent<CardPostsProps> = ({
   user,
   username,
-  files,
+  attachments,
   content,
   publishTime,
 }) => {
+  const _renderAttachments = () => {
+    return attachments?.map((attachment) => {
+      if (attachment?.type === 'image') {
+        return (
+          <div className="post-files">
+            <img alt="img" src={attachment?.url} />
+          </div>
+        );
+      }
+      return <div></div>;
+    });
+  };
   return (
     <Card className="card-posts">
       <div className="username-publish-time">
@@ -28,10 +45,7 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
       </div>
       <div className="username">{username}</div>
       <div className="content">
-        {/* <div className="post-files">
-          <img alt="img" src={require("../../assets/images/img-2.jpg")} />
-        </div> */}
-
+        {_renderAttachments()}
         <div>{content}</div>
       </div>
 
