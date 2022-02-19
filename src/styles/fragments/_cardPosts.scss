@@ -28,10 +28,10 @@
   .icons {
     display: flex;
     justify-content: space-between;
-
     .left-bottom-card {
       svg {
         margin-right: 25px;
+        cursor: pointer;
       }
     }
 
