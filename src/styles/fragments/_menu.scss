@@ -17,10 +17,13 @@
         padding-bottom: 30px;
         .icon {
           padding-top: 15px;
+          display: flex;
+          justify-content: center;
         }
         .wake {
           border-bottom: 2px solid #328bd2;
           display: flex;
+          justify-content: center;
         }
       }
 
@@ -33,6 +36,9 @@
           li {
             padding-bottom: 30px;
             .center-sidebar-element {
+              svg {
+                padding: 10px;
+              }
               &:not(&.icon-plus):hover {
                 background-color: #328bd2;
                 border-radius: 50px;
@@ -48,7 +54,7 @@
         }
       }
     }
-    .bottom-sidebar{
+    .bottom-sidebar {
       .wake {
         border-top: 2px solid #328bd2;
         display: flex;
