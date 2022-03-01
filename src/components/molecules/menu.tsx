@@ -1,5 +1,5 @@
-import { FunctionComponent } from "react";
-import { ISidebarElements } from "../../types";
+import { FunctionComponent } from 'react';
+import { ISidebarElements } from '../../types';
 
 interface MenuProps {
   topIcons?: Array<ISidebarElements>;
@@ -32,7 +32,7 @@ export const Menu: FunctionComponent<MenuProps> = ({
                 <li key={i}>
                   <div
                     className={`center-sidebar-element ${
-                      x.className ? x.className : ""
+                      x.className ? x.className : ''
                     }`}
                   >
                     {x.icon}
