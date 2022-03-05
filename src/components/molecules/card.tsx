@@ -1,9 +1,9 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface CardProps {
-    className?: string;
+  className?: string;
 }
 
 export const Card: FunctionComponent<CardProps> = ({ children, className }) => {
-    return <div className={`card ${className && className}`}>{children}</div>;
-}
+  return <div className={`card ${className}`}>{children}</div>;
+};
