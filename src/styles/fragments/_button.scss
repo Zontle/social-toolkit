@@ -8,4 +8,8 @@
     color: #fff;
     cursor: pointer;
   }
+  &.large {
+    min-width: 100px;
+    height: 44px;
+  }
 }
