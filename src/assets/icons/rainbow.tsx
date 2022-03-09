@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface RainbowIconProps {
   widthSvg: string;
@@ -10,6 +10,7 @@ interface RainbowIconProps {
   fillOne: string;
   fillTwo: string;
   fillThree: string;
+  viewBox?: string;
 }
 export const RainbowIcon: FunctionComponent<RainbowIconProps> = ({
   widthSvg,
@@ -21,13 +22,14 @@ export const RainbowIcon: FunctionComponent<RainbowIconProps> = ({
   fillOne,
   fillTwo,
   fillThree,
+  viewBox,
 }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={widthSvg}
       height={heightSvg}
-      viewBox={`0 0 ${widthSvg} ${heightSvg}`}
+      viewBox={viewBox || `0 0 ${widthSvg} ${heightSvg}`}
     >
       <g id="Group_375" data-name="Group 375" transform="translate(-712 -480)">
         <rect
