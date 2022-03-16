@@ -1,0 +1,24 @@
+.poster-textarea,
+.poster-input {
+  background-color: transparent;
+
+  border: 1px solid #328bd2;
+  border-radius: 5px 5px 5px 0px;
+  color: #eee8d5;
+  letter-spacing: 0.4px;
+  min-height: 100px;
+  width: auto;
+
+  &.large {
+    width: 100%;
+  }
+  &.normalized {
+    border: none !important;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #eee8d5;
+  }
+}
