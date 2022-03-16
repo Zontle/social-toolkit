@@ -2,7 +2,7 @@ import { FunctionComponent, useState, ChangeEvent } from 'react';
 import Button from '../atoms/button';
 import { AstronautIcon } from '../../assets/icons/astronaut';
 import { RainbowIcon } from '../../assets/icons/rainbow';
-
+import Input from '../atoms/input';
 interface TextPostProps {
   className?: string;
   placeholder?: string;
@@ -50,8 +50,10 @@ const TextPost: FunctionComponent<TextPostProps> = ({
         {children}
       </div>
       <div className="media-wrapper">
-        <textarea
-          className="text-input"
+        <Input
+          type="textarea"
+          size="large"
+          normalized
           placeholder={placeholder}
           onChange={_handleSetText}
         />
