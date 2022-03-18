@@ -1,20 +1,29 @@
-import { FunctionComponent } from "react";
-import { IconMenuPostSection } from "../atoms/icons";
+import { FunctionComponent } from 'react';
+import { IconMenuPostSection } from '../atoms/icons';
 
 interface PostsSectionProps {
-  title: string;
+  title?: string;
+  type?: string;
 }
 
 export const PostsSection: FunctionComponent<PostsSectionProps> = ({
-  title,
+  title = '',
   children,
+  type = 'column',
 }) => {
+  if (type === 'row') {
+    return (
+      <div className={`post-section ${type}`}>
+        <div className="container">{children}</div>
+      </div>
+    );
+  }
   return (
-    <div className="post-section">
+    <div className={`post-section ${type}`}>
       <div className="container">
         <div className="top-post">
-          <h1>{title}</h1>
-          <IconMenuPostSection size="2x"/>
+          {title && <h1>{title}</h1>}
+          <IconMenuPostSection size="2x" />
         </div>
         {children}
       </div>
