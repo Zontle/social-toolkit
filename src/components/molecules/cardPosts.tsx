@@ -38,7 +38,7 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
     });
   };
   return (
-    <Card className="card-posts">
+    <Card className="card-posts" active>
       <div className="username-publish-time">
         <div>{user}</div>
         <div className="publish-time">{publishTime}</div>
