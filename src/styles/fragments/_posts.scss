@@ -1,0 +1,25 @@
+.full-section {
+  width: 100%;
+  .top-section {
+    border: 1px solid #14394d;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    .text-title {
+      width: 30%;
+    }
+    .trending {
+      width: 50%;
+      .card {
+        width: 100%;
+        max-width: 780px;
+      }
+    }
+  }
+  .section-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

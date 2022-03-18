@@ -1,0 +1,21 @@
+.trending {
+  .meta-info {
+    h3 {
+      line-height: 2px;
+    }
+    p {
+      line-height: 3px;
+      color: #55585d;
+      font-size: 13px;
+    }
+  }
+  .list-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    &.vertical {
+      flex-direction: column;
+    }
+  }
+}
