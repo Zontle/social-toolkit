@@ -14,5 +14,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   ...Primary.args,
   type: 'primary',
-  children: 'Hola',
+  children: 'Hi',
 };
