@@ -16,6 +16,7 @@ interface CardPostsProps {
   attachments?: Array<Attachment>;
   content: string;
   publishTime: string;
+  active?: boolean;
 }
 
 export const CardPosts: FunctionComponent<CardPostsProps> = ({
@@ -24,6 +25,7 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
   attachments,
   content,
   publishTime,
+  active = false,
 }) => {
   const _renderAttachments = () => {
     return attachments?.map((attachment) => {
@@ -38,7 +40,7 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
     });
   };
   return (
-    <Card className="card-posts" active>
+    <Card className="card-posts" active={active}>
       <div className="username-publish-time">
         <div>{user}</div>
         <div className="publish-time">{publishTime}</div>
