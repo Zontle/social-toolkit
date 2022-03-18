@@ -5,13 +5,37 @@ import {
   SidebarTopElements,
   Wake,
 } from '../../constants';
-import { CardPosts } from '../molecules/cardPosts';
 import { Menu } from '../molecules/menu';
-import { PostsSection } from '../molecules/postsSection';
 
-interface PostsProps {}
+import TextPost from '../molecules/TextPost';
+import { Trending } from '../molecules/trending';
+interface PostsProps {
+  layout?: string;
+  trending?: Array<string>;
+}
 
-export const Posts: FunctionComponent<PostsProps> = () => {
+export const Posts: FunctionComponent<PostsProps> = ({
+  layout = 'regular',
+  children,
+  trending = [],
+}) => {
+  const _renderLayout = () => {
+    if (layout === 'regular') {
+      return <div className="section-container">{children}</div>;
+    }
+    return (
+      <div className="full-section">
+        <div className="top-section">
+          <div className="text-title">
+            <h1>Timeline</h1>
+            <TextPost />
+          </div>
+          <Trending username="QuinsZouls" items={trending} />
+        </div>
+        <div className="section-container">{children}</div>
+      </div>
+    );
+  };
   return (
     <Menu
       topIcons={SidebarTopElements}
@@ -19,15 +43,7 @@ export const Posts: FunctionComponent<PostsProps> = () => {
       bottomIcons={SidebarBottomElements}
       wake={Wake}
     >
-      <PostsSection title="Timeline">
-        <CardPosts
-          user="Cristian"
-          username="CristianGO"
-          attachments={[]}
-          content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
-          publishTime="now"
-        />
-      </PostsSection>
+      {_renderLayout()}
     </Menu>
   );
 };
