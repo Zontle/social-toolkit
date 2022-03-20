@@ -3,7 +3,7 @@ import { IconMenuPostSection } from '../atoms/icons';
 
 interface PostsSectionProps {
   title?: string;
-  type?: string;
+  type?: 'column' | 'row';
 }
 
 export const PostsSection: FunctionComponent<PostsSectionProps> = ({

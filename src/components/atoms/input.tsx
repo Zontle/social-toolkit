@@ -11,11 +11,11 @@ export interface InputProps {
 }
 const Input: FunctionComponent<InputProps> = ({
   children,
-  className,
-  type,
-  size,
+  className = '',
+  type = 'input',
+  size = 'normal',
   placeholder,
-  normalized,
+  normalized = false,
   onChange,
 }) => {
   if (type === 'textarea') {

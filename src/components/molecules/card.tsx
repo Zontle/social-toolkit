@@ -7,8 +7,8 @@ interface CardProps {
 
 export const Card: FunctionComponent<CardProps> = ({
   children,
-  className,
-  active,
+  className = '',
+  active = false,
 }) => {
   return (
     <div className={`card ${className} ${active && 'active'}`}>{children}</div>

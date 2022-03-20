@@ -10,7 +10,7 @@ import { Menu } from '../molecules/menu';
 import TextPost from '../molecules/TextPost';
 import { Trending } from '../molecules/trending';
 interface PostsProps {
-  layout?: string;
+  layout?: 'regular' | 'timeline';
   trending?: Array<string>;
 }
 

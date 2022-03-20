@@ -6,7 +6,7 @@ interface TrendingProps {
   username?: string;
   items?: Array<string>;
   title?: string;
-  layout?: string; //vertical horizontal
+  layout?: 'vertical' | 'horizontal';
 }
 
 export const Trending: FunctionComponent<TrendingProps> = ({
