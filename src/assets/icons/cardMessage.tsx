@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface CardMessageIconProps {
   width: string;
@@ -19,7 +19,7 @@ export const CardMessageIcon: FunctionComponent<CardMessageIconProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox={`0 0 ${width} ${height}`} 
+      viewBox={`0 0 ${width} ${height}`}
     >
       <path
         id="Icon_feather-message-circle"
@@ -28,9 +28,9 @@ export const CardMessageIcon: FunctionComponent<CardMessageIconProps> = ({
         transform="translate(-3.5 -3.5)"
         fill={fill}
         stroke={stroke}
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={strokeWidth}
       />
     </svg>
   );

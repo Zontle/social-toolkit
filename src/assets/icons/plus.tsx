@@ -1,16 +1,16 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface PlusIconProps {
   width: string;
   height: string;
   stroke: string;
 }
-export const PlusIcon: FunctionComponent<PlusIconProps> = ({width, height, stroke}) => {
+export const PlusIcon: FunctionComponent<PlusIconProps> = ({ width, height, stroke }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={"24"}
-      height={"24"}
+      width={'24'}
+      height={'24'}
       viewBox={`0 0 ${width} ${height}`}
     >
       <g
@@ -25,9 +25,9 @@ export const PlusIcon: FunctionComponent<PlusIconProps> = ({width, height, strok
           transform="translate(0 0)"
           fill="none"
           stroke={stroke}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
         />
         <path
           id="Path_4"
@@ -36,9 +36,9 @@ export const PlusIcon: FunctionComponent<PlusIconProps> = ({width, height, strok
           transform="translate(0 0)"
           fill="none"
           stroke={stroke}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="3"
         />
       </g>
     </svg>

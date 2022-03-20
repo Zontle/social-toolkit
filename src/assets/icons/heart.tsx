@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface HeartIconProps {
   width: string;
@@ -28,7 +28,7 @@ export const HeartIcon: FunctionComponent<HeartIconProps> = ({
         transform="translate(-3.125 -4.25)"
         fill={fill}
         stroke={stroke}
-        stroke-width={strokeWidth}
+        strokeWidth={strokeWidth}
       />
     </svg>
   );

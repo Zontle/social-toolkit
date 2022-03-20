@@ -14,11 +14,11 @@ export const Trending: FunctionComponent<TrendingProps> = ({
   username,
   title = 'Trending for',
   items = [],
-  layout = 'horizontal',
+  layout = 'horizontal'
 }) => {
   const _renderList = () => {
     return items.map((trend, index) => (
-      <div className="trend-item">
+      <div className="trend-item" key={index}>
         {index + 1} {trend}
       </div>
     ));

@@ -22,7 +22,7 @@ export const RainbowIcon: FunctionComponent<RainbowIconProps> = ({
   fillOne,
   fillTwo,
   fillThree,
-  viewBox,
+  viewBox
 }) => {
   return (
     <svg

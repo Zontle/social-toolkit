@@ -1,11 +1,11 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface BellIconProps {
   width: string;
   height: string;
   fill: string;
 }
-export const BellIcon: FunctionComponent<BellIconProps> = ({width, height, fill}) => {
+export const BellIcon: FunctionComponent<BellIconProps> = ({ width, height, fill }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

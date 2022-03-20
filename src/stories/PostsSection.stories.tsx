@@ -8,7 +8,7 @@ import { CardPosts } from '../components/molecules/cardPosts';
 
 export default {
   title: 'Poster/PostsSection',
-  component: PostsSection,
+  component: PostsSection
 } as ComponentMeta<typeof PostsSection>;
 
 const Template: ComponentStory<typeof PostsSection> = (args) => (
@@ -25,5 +25,5 @@ PostSection.args = {
       content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
       publishTime="now"
     />
-  ),
+  )
 };

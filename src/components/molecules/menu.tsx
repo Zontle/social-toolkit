@@ -13,16 +13,18 @@ export const Menu: FunctionComponent<MenuProps> = ({
   topIcons,
   centerIcons,
   bottomIcons,
-  wake,
+  wake
 }) => {
   return (
     <div className="container-menu">
       <div className="sidebar-navigation">
         <div className="top-sidebar">
           <div className="detail-top-icon">
-            {topIcons?.length ? (
-              <div className="icon">{topIcons.map((x, i) => x.icon)}</div>
-            ) : null}
+            {topIcons?.length
+              ? (
+                <div className="icon">{topIcons.map((x, i) => x.icon)}</div>
+              )
+              : null}
             {wake ? <div className="wake">{wake.icon}</div> : null}
           </div>
 
@@ -44,9 +46,11 @@ export const Menu: FunctionComponent<MenuProps> = ({
         </div>
         <div className="bottom-sidebar">
           {wake ? <div className="wake">{wake.icon}</div> : null}
-          {bottomIcons?.length ? (
-            <div className="icon">{bottomIcons.map((x, i) => x.icon)}</div>
-          ) : null}
+          {bottomIcons?.length
+            ? (
+              <div className="icon">{bottomIcons.map((x, i) => x.icon)}</div>
+            )
+            : null}
         </div>
       </div>
       {children}

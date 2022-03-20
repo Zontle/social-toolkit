@@ -6,7 +6,7 @@ import '../styles/fragments/_textPost.scss';
 
 export default {
   title: 'Poster/PostsSection',
-  component: TextPost,
+  component: TextPost
 } as ComponentMeta<typeof TextPost>;
 
 const Template: ComponentStory<typeof TextPost> = (args) => (
@@ -16,9 +16,9 @@ const Template: ComponentStory<typeof TextPost> = (args) => (
 );
 
 export const TextPostSection = Template.bind({
-  title: 'Text Section',
+  title: 'Text Section'
 });
 
 TextPostSection.args = {
-  ...TextPostSection.args,
+  ...TextPostSection.args
 };

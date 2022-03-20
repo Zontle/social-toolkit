@@ -1,11 +1,11 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface SettingsIconProps {
   width: string;
   height: string;
   fill: string;
 }
-export const SettingsIcon: FunctionComponent<SettingsIconProps> = ({width, height, fill}) => {
+export const SettingsIcon: FunctionComponent<SettingsIconProps> = ({ width, height, fill }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

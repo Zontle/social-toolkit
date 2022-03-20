@@ -5,7 +5,7 @@ import '../styles/main.scss';
 
 export default {
   title: 'General/Button',
-  component: Button,
+  component: Button
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
@@ -14,5 +14,5 @@ export const Primary = Template.bind({});
 Primary.args = {
   ...Primary.args,
   type: 'primary',
-  children: 'Hi',
+  children: 'Hi'
 };

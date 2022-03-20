@@ -8,17 +8,17 @@ interface TextPostProps {
   placeholder?: string;
   onSubmit?: Function;
 }
-//TODO Add media upload icons
+// TODO Add media upload icons
 const TextPost: FunctionComponent<TextPostProps> = ({
   children,
   className,
   onSubmit = () => ({}),
-  placeholder = 'What’s on you mind?',
+  placeholder = 'What’s on you mind?'
 }) => {
   const [text, setText] = useState('');
   const _handleSubmit = () => {
     onSubmit({
-      text,
+      text
     });
   };
   const _handleSetText = (e: ChangeEvent<HTMLTextAreaElement>) => {

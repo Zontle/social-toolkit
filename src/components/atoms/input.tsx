@@ -16,7 +16,7 @@ const Input: FunctionComponent<InputProps> = ({
   size = 'normal',
   placeholder,
   normalized = false,
-  onChange,
+  onChange
 }) => {
   if (type === 'textarea') {
     return (

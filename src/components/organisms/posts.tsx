@@ -3,7 +3,7 @@ import {
   SidebarBottomElements,
   SidebarCenterElements,
   SidebarTopElements,
-  Wake,
+  Wake
 } from '../../constants';
 import { Menu } from '../molecules/menu';
 
@@ -17,7 +17,7 @@ interface PostsProps {
 export const Posts: FunctionComponent<PostsProps> = ({
   layout = 'regular',
   children,
-  trending = [],
+  trending = []
 }) => {
   const _renderLayout = () => {
     if (layout === 'regular') {

@@ -12,7 +12,7 @@ const Button: FunctionComponent<ButtonProps> = ({
   className = '',
   type = 'default',
   size = 'normal',
-  onClick,
+  onClick
 }) => {
   return (
     <button className={`btn ${type} ${className} ${size}`} onClick={onClick}>

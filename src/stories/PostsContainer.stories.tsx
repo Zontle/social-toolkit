@@ -7,10 +7,10 @@ import '../styles/main.scss';
 
 export default {
   title: 'Poster/Layout',
-  component: Posts,
+  component: Posts
 } as ComponentMeta<typeof Posts>;
 
-const Template: ComponentStory<typeof Posts> = (args) => (
+const Template: ComponentStory<typeof Posts> = args => (
   <Posts {...args}></Posts>
 );
 
@@ -45,7 +45,7 @@ Timeline.args = {
         publishTime="now"
       />
     </PostsSection>
-  ),
+  )
 };
 
 export const Regular = Template.bind({});
@@ -98,5 +98,5 @@ Regular.args = {
         />
       </PostsSection>
     </>
-  ),
+  )
 };

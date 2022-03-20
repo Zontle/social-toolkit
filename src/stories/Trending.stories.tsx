@@ -4,7 +4,7 @@ import '../styles/main.scss';
 
 export default {
   title: 'Poster/Trending',
-  component: Trending,
+  component: Trending
 } as ComponentMeta<typeof Trending>;
 
 const Template: ComponentStory<typeof Trending> = (args) => (
@@ -16,19 +16,19 @@ const trending = ['#RealTime', '#Blog', '#Collection', '#Popular'];
 Horizontal.args = {
   ...Horizontal.args,
   items: trending,
-  username: 'QuinsZouls',
+  username: 'QuinsZouls'
 };
 export const Vertical = Template.bind({});
 Vertical.args = {
   ...Vertical.args,
   items: trending,
   layout: 'vertical',
-  username: 'QuinsZouls',
+  username: 'QuinsZouls'
 };
 export const CustomTitle = Template.bind({});
 CustomTitle.args = {
   ...Vertical.args,
   items: trending,
   title: 'Top Trends',
-  username: 'QuinsZouls',
+  username: 'QuinsZouls'
 };

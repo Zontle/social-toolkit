@@ -9,7 +9,7 @@ interface PostsSectionProps {
 export const PostsSection: FunctionComponent<PostsSectionProps> = ({
   title = '',
   children,
-  type = 'column',
+  type = 'column'
 }) => {
   if (type === 'row') {
     return (

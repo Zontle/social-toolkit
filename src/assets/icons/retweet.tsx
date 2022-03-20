@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent } from 'react';
 
 interface RetweetIconProps {
   width: string;
@@ -17,7 +17,7 @@ export const RetweetIcon: FunctionComponent<RetweetIconProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox={`0 0 ${width} ${height}`} 
+      viewBox={`0 0 ${width} ${height}`}
     >
       <g
         id="Group_85"
@@ -31,9 +31,9 @@ export const RetweetIcon: FunctionComponent<RetweetIconProps> = ({
           transform="translate(891.145 192.5)"
           fill={fill}
           stroke={stroke}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
         <path
           id="Path_12"
@@ -42,9 +42,9 @@ export const RetweetIcon: FunctionComponent<RetweetIconProps> = ({
           transform="translate(899.652 189.519)"
           fill={fill}
           stroke={stroke}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
         <path
           id="Path_13"
@@ -53,9 +53,9 @@ export const RetweetIcon: FunctionComponent<RetweetIconProps> = ({
           transform="translate(898.652 181.933)"
           fill={fill}
           stroke={stroke}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
         <path
           id="Path_14"
@@ -64,9 +64,9 @@ export const RetweetIcon: FunctionComponent<RetweetIconProps> = ({
           transform="translate(899.652 183.556)"
           fill={fill}
           stroke={stroke}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
       </g>
     </svg>

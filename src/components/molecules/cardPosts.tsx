@@ -25,18 +25,18 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
   attachments,
   content,
   publishTime,
-  active = false,
+  active = false
 }) => {
   const _renderAttachments = () => {
-    return attachments?.map((attachment) => {
+    return attachments?.map((attachment, i) => {
       if (attachment?.type === 'image') {
         return (
-          <div className="post-files">
+          <div className="post-files" key={i}>
             <img alt="img" src={attachment?.url} />
           </div>
         );
       }
-      return <div></div>;
+      return <div key={i}></div>;
     });
   };
   return (
