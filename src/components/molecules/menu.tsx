@@ -8,7 +8,7 @@ interface MenuProps {
   wake?: ISidebarElements;
 }
 
-export const Menu: FunctionComponent<MenuProps> = ({
+const Menu: FunctionComponent<MenuProps> = ({
   children,
   topIcons,
   centerIcons,
@@ -57,3 +57,5 @@ export const Menu: FunctionComponent<MenuProps> = ({
     </div>
   );
 };
+
+export default Menu;

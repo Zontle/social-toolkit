@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Menu } from '../components/molecules/menu';
+import Menu from '../components/molecules/menu';
 import { SidebarBottomElements, SidebarCenterElements, SidebarTopElements, Wake } from '../constants';
 
 import '../styles/fragments/_menu.scss';

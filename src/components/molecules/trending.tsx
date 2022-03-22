@@ -9,7 +9,7 @@ interface TrendingProps {
   layout?: 'vertical' | 'horizontal';
 }
 
-export const Trending: FunctionComponent<TrendingProps> = ({
+const Trending: FunctionComponent<TrendingProps> = ({
   className,
   username,
   title = 'Trending for',
@@ -36,3 +36,5 @@ export const Trending: FunctionComponent<TrendingProps> = ({
     </div>
   );
 };
+
+export default Trending;
