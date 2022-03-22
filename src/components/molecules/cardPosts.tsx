@@ -5,12 +5,12 @@ import { RetweetIcon } from '../../assets/icons/retweet';
 import { IconMenu } from '../atoms/icons';
 import { Card } from './card';
 
-interface Attachment {
+export interface Attachment {
   url?: string;
   type: string;
   uid?: string;
 }
-interface CardPostsProps {
+export interface CardPostsProps {
   user: string;
   username: string;
   attachments?: Array<Attachment>;

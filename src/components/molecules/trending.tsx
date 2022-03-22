@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { Card } from './card';
 
-interface TrendingProps {
+export interface TrendingProps {
   className?: string;
   username?: string;
   items?: Array<string>;

@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { ISidebarElements } from '../../types';
 
-interface MenuProps {
+export interface MenuProps {
   topIcons?: Array<ISidebarElements>;
   centerIcons?: Array<ISidebarElements>;
   bottomIcons?: Array<ISidebarElements>;

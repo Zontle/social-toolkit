@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 
-interface CardProps {
+export interface CardProps {
   className?: string;
   active?: boolean;
 }

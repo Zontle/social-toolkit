@@ -1,7 +1,7 @@
 import { FunctionComponent } from 'react';
 import { IconMenuPostSection } from '../atoms/icons';
 
-interface PostsSectionProps {
+export interface PostsSectionProps {
   title?: string;
   type?: 'column' | 'row';
 }

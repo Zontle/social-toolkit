@@ -3,7 +3,7 @@ import Button from '../atoms/button';
 import { AstronautIcon } from '../../assets/icons/astronaut';
 import { RainbowIcon } from '../../assets/icons/rainbow';
 import Input from '../atoms/input';
-interface TextPostProps {
+export interface TextPostProps {
   className?: string;
   placeholder?: string;
   onSubmit?: Function;
