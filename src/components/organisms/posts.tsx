@@ -42,6 +42,7 @@ export const Posts: FunctionComponent<PostsProps> = ({
       centerIcons={SidebarCenterElements}
       bottomIcons={SidebarBottomElements}
       wake={Wake}
+      active="home"
     >
       {_renderLayout()}
     </Menu>

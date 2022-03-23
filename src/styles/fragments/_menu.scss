@@ -39,7 +39,8 @@
               svg {
                 padding: 10px;
               }
-              &:not(&.icon-plus):hover {
+              &:not(&.icon-plus):hover,
+              &.active {
                 background-color: #328bd2;
                 border-radius: 50px;
 

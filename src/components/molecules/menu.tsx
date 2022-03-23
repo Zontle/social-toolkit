@@ -1,11 +1,13 @@
 import { FunctionComponent } from 'react';
-import { ISidebarElements } from '../../types';
+import { SidebarElement, MenuOnChange } from '../../types';
 
 export interface MenuProps {
-  topIcons?: Array<ISidebarElements>;
-  centerIcons?: Array<ISidebarElements>;
-  bottomIcons?: Array<ISidebarElements>;
-  wake?: ISidebarElements;
+  topIcons?: Array<SidebarElement>;
+  centerIcons?: Array<SidebarElement>;
+  bottomIcons?: Array<SidebarElement>;
+  wake?: SidebarElement;
+  active?: 'notifications' | 'home' | 'settings' | 'messages';
+  onChange?: MenuOnChange;
 }
 
 const Menu: FunctionComponent<MenuProps> = ({
@@ -13,28 +15,28 @@ const Menu: FunctionComponent<MenuProps> = ({
   topIcons,
   centerIcons,
   bottomIcons,
-  wake
+  wake,
+  active,
+  onChange = () => ({})
 }) => {
   return (
     <div className="container-menu">
       <div className="sidebar-navigation">
         <div className="top-sidebar">
           <div className="detail-top-icon">
-            {topIcons?.length
-              ? (
-                <div className="icon">{topIcons.map((x, i) => x.icon)}</div>
-              )
-              : null}
+            {topIcons?.length && (
+              <div className="icon">{topIcons.map((x, i) => x.icon)}</div>
+            )}
             {wake ? <div className="wake">{wake.icon}</div> : null}
           </div>
 
           <div className="center-sidebar">
             <ul>
               {centerIcons?.map((x, i) => (
-                <li key={i}>
+                <li key={i} onClick={() => onChange(x.slug)}>
                   <div
-                    className={`center-sidebar-element ${
-                      x.className ? x.className : ''
+                    className={`center-sidebar-element ${x.className || ''} ${
+                      active === x.slug && 'active'
                     }`}
                   >
                     {x.icon}
@@ -46,11 +48,9 @@ const Menu: FunctionComponent<MenuProps> = ({
         </div>
         <div className="bottom-sidebar">
           {wake ? <div className="wake">{wake.icon}</div> : null}
-          {bottomIcons?.length
-            ? (
-              <div className="icon">{bottomIcons.map((x, i) => x.icon)}</div>
-            )
-            : null}
+          {bottomIcons?.length && (
+            <div className="icon">{bottomIcons.map((x, i) => x.icon)}</div>
+          )}
         </div>
       </div>
       {children}

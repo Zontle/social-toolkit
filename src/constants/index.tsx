@@ -5,27 +5,40 @@ import { MessageIcon } from '../assets/icons/message';
 import { PlusIcon } from '../assets/icons/plus';
 import { RainbowIcon } from '../assets/icons/rainbow';
 import { SettingsIcon } from '../assets/icons/settings';
-import { ISidebarElements } from '../types';
+import { SidebarElement } from '../types';
 
-export const SidebarTopElements: ISidebarElements[] = [
+export const SidebarTopElements: SidebarElement[] = [
   { icon: <AstronautIcon width="23.815" height="27.218" fill="#328bd2" /> }
 ];
 
-export const SidebarCenterElements: ISidebarElements[] = [
+export const SidebarCenterElements: SidebarElement[] = [
   {
     icon: <PlusIcon width="24" height="24" stroke="#d33682" />,
-    className: 'icon-plus'
+    className: 'icon-plus',
+    slug: 'plus'
   },
-  { icon: <HomeIcon width="24" height="22.154" fill="#1d5175" /> },
-  { icon: <BellIcon width="21" height="24" fill="#1d5175" /> },
-  { icon: <MessageIcon width="24" height="24" fill="#1d5175" /> }
+  {
+    icon: <HomeIcon width="24" height="22.154" fill="#1d5175" />,
+    slug: 'home'
+  },
+  {
+    icon: <BellIcon width="21" height="24" fill="#1d5175" />,
+    slug: 'notifications'
+  },
+  {
+    icon: <MessageIcon width="24" height="24" fill="#1d5175" />,
+    slug: 'messages'
+  }
 ];
 
-export const SidebarBottomElements: ISidebarElements[] = [
-  { icon: <SettingsIcon width="24" height="24.006" fill="#328bd2" /> }
+export const SidebarBottomElements: SidebarElement[] = [
+  {
+    icon: <SettingsIcon width="24" height="24.006" fill="#328bd2" />,
+    slug: 'settings'
+  }
 ];
 
-export const Wake: ISidebarElements = {
+export const Wake: SidebarElement = {
   icon: (
     <RainbowIcon
       widthSvg="24"
