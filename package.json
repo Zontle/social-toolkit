@@ -21,6 +21,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "prepare": "npm run build",
     "start": "react-scripts start",
     "build": "rollup -c",
     "build:esm": "tsc",
