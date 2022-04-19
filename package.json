@@ -37,14 +37,16 @@
       "react-app",
       "react-app/jest"
     ],
-    "overrides": [{
-      "files": [
-        "**/*.stories.*"
-      ],
-      "rules": {
-        "import/no-anonymous-default-export": "off"
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
       }
-    }]
+    ]
   },
   "browserslist": {
     "production": [
@@ -77,8 +79,9 @@
     "rollup": "^2.70.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "3",
     "rollup-plugin-typescript2": "^0.31.2",
-    "sass": "^1.49.0",
+    "sass": "^1.50.1",
     "webpack": "^5.68.0"
   },
   "files": [
