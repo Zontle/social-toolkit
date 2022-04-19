@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "yarn build:esm && yarn build:cjs",
+    "build": "rollup -c",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "test": "react-scripts test",
@@ -58,11 +58,8 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.49.0",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^17.0.20",
-    "@types/react-dom": "^17.0.9",
+    "@rollup/plugin-commonjs": "^21.1.0",
+    "@rollup/plugin-node-resolve": "^13.2.1",
     "@storybook/addon-actions": "^6.4.18",
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
@@ -71,6 +68,16 @@
     "@storybook/node-logger": "^6.4.18",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.18",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "postcss": "^8.4.12",
+    "rollup": "^2.70.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "sass": "^1.49.0",
     "webpack": "^5.68.0"
   },
   "files": [
