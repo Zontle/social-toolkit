@@ -10,7 +10,7 @@ import path from 'path';
 const packageJson = require('./package.json');
 
 export default {
-  input: 'src/components/index.tsx',
+  input: 'src/index.tsx',
   output: [
     {
       file: packageJson.main,
