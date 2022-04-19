@@ -25,7 +25,7 @@ const Menu: FunctionComponent<MenuProps> = ({
         <div className="top-sidebar">
           <div className="detail-top-icon">
             {topIcons?.length && (
-              <div className="icon">{topIcons.map((x, i) => x.icon)}</div>
+              <div className="icon">{topIcons.map(x => x.icon)}</div>
             )}
             {wake ? <div className="wake">{wake.icon}</div> : null}
           </div>
@@ -49,7 +49,7 @@ const Menu: FunctionComponent<MenuProps> = ({
         <div className="bottom-sidebar">
           {wake ? <div className="wake">{wake.icon}</div> : null}
           {bottomIcons?.length && (
-            <div className="icon">{bottomIcons.map((x, i) => x.icon)}</div>
+            <div className="icon">{bottomIcons.map(x => x.icon)}</div>
           )}
         </div>
       </div>
