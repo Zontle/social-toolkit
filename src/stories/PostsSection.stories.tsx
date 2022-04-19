@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { PostsSection } from '../components/molecules/postsSection';
@@ -11,7 +13,7 @@ export default {
   component: PostsSection
 } as ComponentMeta<typeof PostsSection>;
 
-const Template: ComponentStory<typeof PostsSection> = (args) => (
+const Template: ComponentStory<typeof PostsSection> = args => (
   <PostsSection {...args} />
 );
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { CardPosts } from '../components/molecules/cardPosts';
@@ -9,7 +10,7 @@ export default {
   component: CardPosts
 } as ComponentMeta<typeof CardPosts>;
 
-const Template: ComponentStory<typeof CardPosts> = (args) => (
+const Template: ComponentStory<typeof CardPosts> = args => (
   <CardPosts {...args} />
 );
 

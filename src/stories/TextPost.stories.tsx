@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import TextPost from '../components/molecules/TextPost';
@@ -9,7 +11,7 @@ export default {
   component: TextPost
 } as ComponentMeta<typeof TextPost>;
 
-const Template: ComponentStory<typeof TextPost> = (args) => (
+const Template: ComponentStory<typeof TextPost> = args => (
   <div style={{ maxWidth: 553 }}>
     <TextPost {...args} />
   </div>

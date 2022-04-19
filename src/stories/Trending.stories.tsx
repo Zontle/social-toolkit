@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Trending from '../components/molecules/trending';
 import '../styles/main.scss';
@@ -7,7 +9,7 @@ export default {
   component: Trending
 } as ComponentMeta<typeof Trending>;
 
-const Template: ComponentStory<typeof Trending> = (args) => (
+const Template: ComponentStory<typeof Trending> = args => (
   <Trending {...args} />
 );
 
