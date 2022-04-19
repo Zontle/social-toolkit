@@ -2,7 +2,9 @@
   "name": "social-toolkit",
   "version": "0.1.0",
   "private": true,
-  "main": "src/components/index.tsx",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
@@ -20,7 +22,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "test": "react-scripts test",
     "eslint": "eslint src/**/*.tsx",
     "eject": "react-scripts eject",
@@ -68,5 +72,8 @@
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.18",
     "webpack": "^5.68.0"
-  }
+  },
+  "files": [
+    "/lib"
+  ]
 }
