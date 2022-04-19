@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FunctionComponent, ReactNode, ChangeEventHandler } from 'react';
 
 export interface InputProps {

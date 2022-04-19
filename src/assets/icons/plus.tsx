@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FunctionComponent } from 'react';
 
 interface PlusIconProps {
@@ -5,7 +7,11 @@ interface PlusIconProps {
   height: string;
   stroke: string;
 }
-export const PlusIcon: FunctionComponent<PlusIconProps> = ({ width, height, stroke }) => {
+export const PlusIcon: FunctionComponent<PlusIconProps> = ({
+  width,
+  height,
+  stroke
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

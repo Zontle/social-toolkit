@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FunctionComponent } from 'react';
 import { CardMessageIcon } from '../../assets/icons/cardMessage';
 import { HeartIcon } from '../../assets/icons/heart';

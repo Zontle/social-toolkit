@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { AstronautIcon } from '../assets/icons/astronaut';
 import { BellIcon } from '../assets/icons/bell';
 import { HomeIcon } from '../assets/icons/home';

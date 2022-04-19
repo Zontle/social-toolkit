@@ -2,6 +2,7 @@ import { Posts } from './components/organisms/posts';
 
 import { CardPosts } from './components/molecules/cardPosts';
 import { PostsSection } from './components/molecules/postsSection';
+import React from 'react';
 
 function App() {
   const trending = ['#RealTime', '#Blog', '#Collection', '#Popular'];

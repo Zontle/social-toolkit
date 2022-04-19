@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FunctionComponent, useState, ChangeEvent } from 'react';
 import Button from '../atoms/button';
 import { AstronautIcon } from '../../assets/icons/astronaut';

@@ -1,4 +1,6 @@
 import { FunctionComponent } from 'react';
+import React from 'react';
+
 import { Card } from './card';
 
 export interface TrendingProps {

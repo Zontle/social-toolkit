@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { FunctionComponent } from 'react';
 
 interface MessageIconProps {
@@ -5,7 +7,11 @@ interface MessageIconProps {
   height: string;
   fill: string;
 }
-export const MessageIcon: FunctionComponent<MessageIconProps> = ({ width, height, fill }) => {
+export const MessageIcon: FunctionComponent<MessageIconProps> = ({
+  width,
+  height,
+  fill
+}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
