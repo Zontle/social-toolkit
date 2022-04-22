@@ -6,22 +6,34 @@ import scss from 'rollup-plugin-scss'
 import autoprefixer from 'autoprefixer'
 import postcss from 'postcss'
 import path from 'path';
+import { terser } from 'rollup-plugin-terser';
 
 const packageJson = require('./package.json');
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   input: 'src/index.tsx',
   output: [
     {
       file: packageJson.main,
       format: 'cjs',
-      sourcemap: true
+      sourcemap: true,
+      plugins: [terser()],
+      exports: 'auto',
     },
     {
       file: packageJson.module,
-      format: 'esm',
-      sourcemap: true
-    }
+      format: 'es',
+      sourcemap: true,
+      plugins: [terser()],
+      exports: 'auto',
+    },
+    {
+      file: 'lib/index.js',
+      format: 'cjs',
+      sourcemap: true,
+      exports: 'auto',
+    },
   ],
   plugins: [
     peerDepsExternal(),
