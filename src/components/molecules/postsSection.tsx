@@ -6,6 +6,7 @@ import { IconMenuPostSection } from '../atoms/icons';
 export interface PostsSectionProps {
   title?: string;
   type?: 'column' | 'row';
+  children?: React.ReactNode;
 }
 
 export const PostsSection: FunctionComponent<PostsSectionProps> = ({

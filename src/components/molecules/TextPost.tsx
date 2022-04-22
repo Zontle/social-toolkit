@@ -9,6 +9,7 @@ export interface TextPostProps {
   className?: string;
   placeholder?: string;
   onSubmit?: Function;
+  children?: React.ReactNode;
 }
 // TODO Add media upload icons
 const TextPost: FunctionComponent<TextPostProps> = ({

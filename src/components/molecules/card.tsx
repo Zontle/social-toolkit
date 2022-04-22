@@ -5,6 +5,7 @@ import { FunctionComponent } from 'react';
 export interface CardProps {
   className?: string;
   active?: boolean;
+  children?: React.ReactNode;
 }
 
 export const Card: FunctionComponent<CardProps> = ({

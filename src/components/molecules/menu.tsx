@@ -10,6 +10,7 @@ export interface MenuProps {
   wake?: SidebarElement;
   active?: 'notifications' | 'home' | 'settings' | 'messages';
   onChange?: MenuOnChange;
+  children?: React.ReactNode;
 }
 
 const Menu: FunctionComponent<MenuProps> = ({

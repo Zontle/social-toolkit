@@ -14,6 +14,7 @@ import Trending from '../molecules/trending';
 export interface PostsProps {
   layout?: 'regular' | 'timeline';
   trending?: Array<string>;
+  children?: React.ReactNode;
 }
 
 export const Posts: FunctionComponent<PostsProps> = ({
