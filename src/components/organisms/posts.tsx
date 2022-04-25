@@ -29,7 +29,7 @@ export const Posts: FunctionComponent<PostsProps> = ({
 }) => {
   const _renderLayout = () => {
     if (layout === 'regular') {
-      return <div className="section-container">{children}</div>;
+      return <>{children}</>;
     }
     return (
       <div className="full-section">
