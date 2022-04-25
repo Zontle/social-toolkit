@@ -15,12 +15,14 @@ export interface PostsProps {
   layout?: 'regular' | 'timeline';
   trending?: Array<string>;
   children?: React.ReactNode;
+  active?: 'notifications' | 'home' | 'settings' | 'messages';
 }
 
 export const Posts: FunctionComponent<PostsProps> = ({
   layout = 'regular',
   children,
-  trending = []
+  trending = [],
+  active
 }) => {
   const _renderLayout = () => {
     if (layout === 'regular') {
@@ -45,7 +47,7 @@ export const Posts: FunctionComponent<PostsProps> = ({
       centerIcons={SidebarCenterElements}
       bottomIcons={SidebarBottomElements}
       wake={Wake}
-      active="home"
+      active={active}
     >
       {_renderLayout()}
     </Menu>
