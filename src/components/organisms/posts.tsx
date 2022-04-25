@@ -7,6 +7,7 @@ import {
   SidebarTopElements,
   Wake
 } from '../../constants';
+import { MenuOnChange } from 'types';
 import Menu from '../molecules/menu';
 import TextPost from '../molecules/TextPost';
 import Trending from '../molecules/trending';
@@ -16,13 +17,15 @@ export interface PostsProps {
   trending?: Array<string>;
   children?: React.ReactNode;
   active?: 'notifications' | 'home' | 'settings' | 'messages';
+  onSelect?: MenuOnChange;
 }
 
 export const Posts: FunctionComponent<PostsProps> = ({
   layout = 'regular',
   children,
   trending = [],
-  active
+  active,
+  onSelect
 }) => {
   const _renderLayout = () => {
     if (layout === 'regular') {
@@ -48,6 +51,7 @@ export const Posts: FunctionComponent<PostsProps> = ({
       bottomIcons={SidebarBottomElements}
       wake={Wake}
       active={active}
+      onChange={onSelect}
     >
       {_renderLayout()}
     </Menu>
