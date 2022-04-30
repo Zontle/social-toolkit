@@ -28,3 +28,6 @@ export { default as PostWriter } from './molecules/TextPost';
 
 export type { PostsProps as LayoutProps } from './organisms/posts';
 export { Posts as Layout } from './organisms/posts';
+
+export type { ModalProps } from './molecules/modal';
+export { default as Modal } from './molecules/modal';

@@ -1,0 +1,25 @@
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: none;
+  &.visible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 600px;
+    z-index: 6;
+  }
+  .wrapper-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
