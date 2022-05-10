@@ -16,6 +16,12 @@
         max-width: 780px;
       }
     }
+    @media only screen and (max-width: 600px) {
+      .text-title,
+      .trending {
+        width: 100%;
+      }
+    }
   }
   .section-container {
     display: flex;
