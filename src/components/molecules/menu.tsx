@@ -2,7 +2,8 @@ import React from 'react';
 
 import { FunctionComponent } from 'react';
 import { SidebarElement, MenuOnChange } from '../../types';
-
+//Hooks
+import { useMobile } from '../../hooks/responsive.hook';
 export interface MenuProps {
   topIcons?: Array<SidebarElement>;
   centerIcons?: Array<SidebarElement>;
@@ -22,6 +23,10 @@ const Menu: FunctionComponent<MenuProps> = ({
   active,
   onChange = () => ({})
 }) => {
+  const isMobile = useMobile();
+  if (isMobile) {
+    return <div>{children}</div>;
+  }
   return (
     <div className="container-menu">
       <div className="sidebar-navigation">
