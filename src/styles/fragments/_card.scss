@@ -5,6 +5,9 @@
   opacity: 1;
   padding: 12px;
   width: 90%;
+  &.stretch {
+    padding: 0px;
+  }
   &.active {
     background: $blue;
     border: 2px solid $light_blue;

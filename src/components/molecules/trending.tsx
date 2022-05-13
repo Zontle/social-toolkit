@@ -28,7 +28,7 @@ const Trending: FunctionComponent<TrendingProps> = ({
   return (
     <div className={`trending ${className}`}>
       <h1>Trending</h1>
-      <Card>
+      <Card className="stretch">
         <div className="meta-info">
           <h3>{title}</h3>
           <p>@{username}</p>
