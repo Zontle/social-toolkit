@@ -16,7 +16,7 @@
         max-width: 780px;
       }
     }
-    @media only screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       .text-title,
       .trending {
         width: 100%;
@@ -27,5 +27,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 100%;
+  }
+  .full-section .top-section .trending  {
+    width: 100%;
   }
 }
