@@ -10,7 +10,7 @@ export interface MenuProps {
   bottomIcons?: Array<SidebarElement>;
   wake?: SidebarElement;
   active?: 'notifications' | 'home' | 'settings' | 'messages';
-  onChange?: MenuOnChange;
+  onChange?: MenuOnChange | Function;
   children?: React.ReactNode;
 }
 
