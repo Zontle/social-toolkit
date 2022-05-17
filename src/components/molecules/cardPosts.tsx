@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { FunctionComponent } from 'react';
 import { CardMessageIcon } from '../../assets/icons/cardMessage';
 import { HeartIcon } from '../../assets/icons/heart';
@@ -17,7 +16,7 @@ export interface CardPostsProps {
   username: string;
   attachments?: Array<Attachment>;
   content: string;
-  publishTime: string;
+  publishTime: React.ReactNode;
   active?: boolean;
 }
 
