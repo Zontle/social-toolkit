@@ -23,7 +23,7 @@ export interface CardPostsProps {
 export const CardPosts: FunctionComponent<CardPostsProps> = ({
   user,
   username,
-  attachments,
+  attachments = [],
   content,
   publishTime,
   active = false
@@ -41,7 +41,10 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
     });
   };
   return (
-    <Card className="card-posts" active={active}>
+    <Card
+      className={`card-posts ${attachments?.length > 0 ? 'media' : ''}`}
+      active={active}
+    >
       <div className="username-publish-time">
         <div>{user}</div>
         <div className="publish-time">{publishTime}</div>
