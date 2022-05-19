@@ -18,6 +18,7 @@ export interface PostsProps {
   children?: React.ReactNode;
   active?: 'notifications' | 'home' | 'settings' | 'messages';
   onSelect?: MenuOnChange | Function;
+  onPostSubmit?: Function;
 }
 
 export const Posts: FunctionComponent<PostsProps> = ({
@@ -25,7 +26,8 @@ export const Posts: FunctionComponent<PostsProps> = ({
   children,
   trending = [],
   active,
-  onSelect
+  onSelect,
+  onPostSubmit
 }) => {
   const _renderLayout = () => {
     if (layout === 'regular') {
@@ -36,7 +38,7 @@ export const Posts: FunctionComponent<PostsProps> = ({
         <div className="top-section">
           <div className="text-title">
             <h1>Timeline</h1>
-            <TextPost />
+            <TextPost onSubmit={onPostSubmit} />
           </div>
           <Trending username="QuinsZouls" items={trending} />
         </div>

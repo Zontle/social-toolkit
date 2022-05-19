@@ -4,7 +4,7 @@
   display: flex;
   padding: 0px 5px;
   justify-content: space-between;
-  height: 180px;
+  min-height: 180px;
   .user-wrapper {
     width: 30%;
     display: flex;
@@ -51,10 +51,30 @@
         color: #eee8d5;
       }
     }
+    .images-container {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
     .triggers {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 5px;
+      .icons {
+        height: 100%;
+        display: flex;
+        justify-items: center;
+        .upload-icon {
+          height: 30px;
+        }
+      }
     }
   }
 }

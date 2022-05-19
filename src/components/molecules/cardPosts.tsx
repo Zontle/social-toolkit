@@ -1,11 +1,13 @@
 import React from 'react';
+import dayjs, {type Dayjs} from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime'
 import { FunctionComponent } from 'react';
 import { CardMessageIcon } from '../../assets/icons/cardMessage';
 import { HeartIcon } from '../../assets/icons/heart';
 import { RetweetIcon } from '../../assets/icons/retweet';
 import { IconMenu } from '../atoms/icons';
 import { Card } from './card';
-
+import { parseTimeFromNow } from '../../utils/time';
 export interface Attachment {
   url?: string;
   type: string;
@@ -16,9 +18,10 @@ export interface CardPostsProps {
   username: string;
   attachments?: Array<Attachment>;
   content: string;
-  publishTime: React.ReactNode;
+  publishTime: React.ReactNode | Dayjs | string;
   active?: boolean;
 }
+dayjs.extend(relativeTime);
 
 export const CardPosts: FunctionComponent<CardPostsProps> = ({
   user,
@@ -47,7 +50,7 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
     >
       <div className="username-publish-time">
         <div>{user}</div>
-        <div className="publish-time">{publishTime}</div>
+        <div className="publish-time">{parseTimeFromNow(publishTime)}</div>
       </div>
       <div className="username">{username}</div>
       <div className="content">
