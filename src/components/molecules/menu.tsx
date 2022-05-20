@@ -20,7 +20,6 @@ const Menu: FunctionComponent<MenuProps> = ({
   topIcons,
   centerIcons,
   bottomIcons,
-  wake,
   active,
   onChange = () => ({})
 }) => {
@@ -46,7 +45,6 @@ const Menu: FunctionComponent<MenuProps> = ({
                   {topIcons?.length && (
                     <div className="icon">{topIcons.map(x => x.icon)}</div>
                   )}
-                  {wake ? <div className="wake">{wake.icon}</div> : null}
                 </div>
 
                 <div className="center-sidebar">
@@ -66,7 +64,6 @@ const Menu: FunctionComponent<MenuProps> = ({
                 </div>
               </div>
               <div className="bottom-sidebar">
-                {wake ? <div className="wake">{wake.icon}</div> : null}
                 {bottomIcons?.length && (
                   <div className="icon">{bottomIcons.map(x => x.icon)}</div>
                 )}
@@ -85,7 +82,6 @@ const Menu: FunctionComponent<MenuProps> = ({
             {topIcons?.length && (
               <div className="icon">{topIcons.map(x => x.icon)}</div>
             )}
-            {wake ? <div className="wake">{wake.icon}</div> : null}
           </div>
 
           <div className="center-sidebar">
@@ -105,7 +101,6 @@ const Menu: FunctionComponent<MenuProps> = ({
           </div>
         </div>
         <div className="bottom-sidebar">
-          {wake ? <div className="wake">{wake.icon}</div> : null}
           {bottomIcons?.length && (
             <div className="icon">{bottomIcons.map(x => x.icon)}</div>
           )}
