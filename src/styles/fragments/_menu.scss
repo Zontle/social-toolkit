@@ -63,3 +63,44 @@
     }
   }
 }
+.container-mobile {
+  height: 100vh;
+  overflow: hidden;
+  header {
+    height: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 10px;
+    .menu-trigger {
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+  main {
+    height: calc(100vh - 50px);
+  }
+}
+.sidebar-drawer{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  &.visible {
+    display: block;
+  }
+  .cover {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.6);
+  }
+  .container-menu {
+    z-index: 2;
+    background-color: #0e2430;
+    max-width: 80px;
+  }
+}
