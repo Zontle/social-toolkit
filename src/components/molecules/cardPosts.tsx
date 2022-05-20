@@ -21,6 +21,7 @@ export interface CardPostsProps {
   publishTime: React.ReactNode | Dayjs | string;
   active?: boolean;
 }
+const CHAR_CONTENT_LIMIT = 280;
 dayjs.extend(relativeTime);
 
 export const CardPosts: FunctionComponent<CardPostsProps> = ({
@@ -43,21 +44,34 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
       return <div key={i}></div>;
     });
   };
+  const _parseContent = () => {
+    if (typeof content === 'string') {
+      //Limit number of characters
+      if (content.length > CHAR_CONTENT_LIMIT) {
+        if (attachments.length > 0) {
+          return content.substring(0, CHAR_CONTENT_LIMIT - 150) + '...'
+        }
+        return content.substring(0, CHAR_CONTENT_LIMIT) + '...'
+      }
+    }
+    return content
+  }
   return (
     <Card
       className={`card-posts ${attachments?.length > 0 ? 'media' : ''}`}
       active={active}
     >
-      <div className="username-publish-time">
-        <div>{user}</div>
-        <div className="publish-time">{parseTimeFromNow(publishTime)}</div>
+      <div className='post-content'>
+        <div className="username-publish-time">
+          <div>{user}</div>
+          <div className="publish-time">{parseTimeFromNow(publishTime)}</div>
+        </div>
+        <div className="username">{username}</div>
+        <div className="content">
+          {_renderAttachments()}
+          <div>{_parseContent()}</div>
+        </div>
       </div>
-      <div className="username">{username}</div>
-      <div className="content">
-        {_renderAttachments()}
-        <div>{content}</div>
-      </div>
-
       <div className="icons">
         <div className="left-bottom-card">
           <HeartIcon
