@@ -15,8 +15,8 @@ export interface TextPostProps {
   children?: React.ReactNode;
 }
 export interface FileProps {
-  file: any,
-  uri: string
+  file: any;
+  uri: string;
 }
 // TODO Add media upload icons
 const TextPost: FunctionComponent<TextPostProps> = ({
@@ -32,6 +32,8 @@ const TextPost: FunctionComponent<TextPostProps> = ({
       text,
       files
     });
+    setFiles([]);
+    setText('');
   };
   const _handleSetText = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value);
@@ -42,7 +44,8 @@ const TextPost: FunctionComponent<TextPostProps> = ({
       {
         file: rcFile,
         uri: await fileToBase64(rcFile)
-      }]);
+      }
+    ]);
     return '';
   };
   const _renderImageList = () => {
@@ -52,7 +55,7 @@ const TextPost: FunctionComponent<TextPostProps> = ({
         <div className="image-preview-wrapper">
           <img src={file?.uri} />
         </div>
-      );;
+      );
     }
     return images;
   };
@@ -86,7 +89,7 @@ const TextPost: FunctionComponent<TextPostProps> = ({
           type="textarea"
           size="large"
           normalized
-          className='text-input'
+          className="text-input"
           placeholder={placeholder}
           onChange={_handleSetText}
         />
