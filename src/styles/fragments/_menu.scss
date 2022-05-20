@@ -16,9 +16,15 @@
         flex-direction: column;
         padding-bottom: 30px;
         .icon {
-          padding-top: 15px;
+          border-radius: 50%;
+          border: 1px solid #86A8F4;
           display: flex;
           justify-content: center;
+          align-items: center;
+          padding: 0px!important;
+          height: 44px;
+          width: 44px;
+          margin-top: 10px;
         }
         .wake {
           border-bottom: 2px solid #328bd2;
@@ -59,6 +65,17 @@
       .wake {
         border-top: 2px solid #328bd2;
         display: flex;
+      }
+      .icon {
+        border-radius: 50%;
+        border: 1px solid #86A8F4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        height: 44px;
+        width: 44px;
+        margin-bottom: 10px;
       }
     }
   }

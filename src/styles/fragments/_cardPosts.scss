@@ -5,6 +5,15 @@
       max-height: 200px;
       object-fit: cover;
     }
+    &.large {
+      grid-row: 3/4;
+    }
+  }
+  &.large {
+    grid-row: span 3;
+  }
+  .post-content {
+    height: 90%;
   }
   .username-publish-time {
     display: flex;
@@ -33,6 +42,7 @@
   }
 
   .icons {
+    height: 10%;
     display: flex;
     justify-content: space-between;
     .left-bottom-card {
