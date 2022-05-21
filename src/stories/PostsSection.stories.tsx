@@ -14,18 +14,35 @@ export default {
 } as ComponentMeta<typeof PostsSection>;
 
 const Template: ComponentStory<typeof PostsSection> = args => (
-  <PostsSection {...args} />
+  <div>
+    <PostsSection {...args} />
+  </div>
 );
 
 export const PostSection = Template.bind({});
 PostSection.args = {
-  children: (
+  children: [
     <CardPosts
       user="Cristian"
       username="@cristian"
       attachments={[]}
       content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
       publishTime="now"
+    />,
+    <CardPosts
+      user="Cristian"
+      username="@cristian"
+      attachments={[]}
+      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
+      publishTime="now"
+    />,
+    <CardPosts
+      active
+      user="Cristian"
+      username="@cristian"
+      attachments={[]}
+      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quo voluptate odio aliquid maxime amet commodi tenetur possimus et perferendis."
+      publishTime="now"
     />
-  )
+  ]
 };
