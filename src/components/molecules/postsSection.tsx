@@ -27,13 +27,11 @@ export const PostsSection: FunctionComponent<PostsSectionProps> = ({
   }
   return (
     <div className={`post-section ${className} ${type}`}>
-      <div className="container">
-        <div className="top-post">
-          {title && <h1>{title}</h1>}
-          {!noIcons && <IconMenuPostSection size="2x" />}
-        </div>
-        {children}
+      <div className="top-post">
+        {title && <h1>{title}</h1>}
+        {!noIcons && <IconMenuPostSection size="2x" />}
       </div>
+      <div className="container">{children}</div>
     </div>
   );
 };

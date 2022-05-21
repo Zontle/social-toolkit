@@ -4,6 +4,8 @@
   justify-content: center;
   text-align: left;
   width: 100%;
+  border: 1px solid #14394d;
+  padding: 10px;
   &.row {
     .container {
       width: 100%;
@@ -16,7 +18,25 @@
       .card-posts {
         grid-column: span 2;
       }
-
+    }
+    @media screen and (max-width: 800px) {
+      .container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+      }
+    }
+  }
+  &.column {
+    flex-direction: column;
+    width: auto;
+    .container {
+      height: auto;
+      width: 100%;
+      grid-gap: 15px;
+      .card-posts {
+        grid-column: 1;
+      }
     }
     @media screen and (max-width: 800px) {
       .container {
@@ -27,7 +47,7 @@
     }
   }
   .container {
-    border: 1px solid #14394d;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -35,15 +55,15 @@
     gap: 20px;
     height: 100vh;
     padding: 20px 16px 50px 16px;
-
-    .top-post {
-      display: flex;
-      justify-content: space-between;
-      button {
-        background: none;
-        border: 0;
-        color: #d33682;
-      }
+  }
+  .top-post {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    button {
+      background: none;
+      border: 0;
+      color: #d33682;
     }
   }
 }
