@@ -23,4 +23,11 @@
     z-index: -1;
     background-color: rgba(0, 0, 0, 0.5);
   }
+  @media screen and (max-width: 600px) {
+    .modal-container {
+      width: 100%;
+      min-width: min-content;
+      padding: 20px;
+    }
+  }
 }
