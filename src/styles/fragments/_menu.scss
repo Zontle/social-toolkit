@@ -17,11 +17,11 @@
         padding-bottom: 30px;
         .icon {
           border-radius: 50%;
-          border: 1px solid #86A8F4;
+          border: 1px solid #86a8f4;
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 0px!important;
+          padding: 0px !important;
           height: 44px;
           width: 44px;
           margin-top: 10px;
@@ -68,7 +68,7 @@
       }
       .icon {
         border-radius: 50%;
-        border: 1px solid #86A8F4;
+        border: 1px solid #86a8f4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -76,6 +76,9 @@
         height: 44px;
         width: 44px;
         margin-bottom: 10px;
+        &.active {
+          background-color: #fff;
+        }
       }
     }
   }
@@ -98,7 +101,7 @@
     height: calc(100vh - 50px);
   }
 }
-.sidebar-drawer{
+.sidebar-drawer {
   height: 100vh;
   width: 100vw;
   position: fixed;
@@ -113,7 +116,7 @@
     width: 100vw;
     position: absolute;
     z-index: -1;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
   .container-menu {
     z-index: 2;
