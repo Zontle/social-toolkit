@@ -5,7 +5,6 @@ import { faImage } from '@fortawesome/free-solid-svg-icons';
 import Button from '../atoms/button';
 import Input from '../atoms/input';
 import { AstronautIcon } from '../../assets/icons/astronaut';
-import { RainbowIcon } from '../../assets/icons/rainbow';
 
 import { fileToBase64 } from '../../utils/file';
 export interface TextPostProps {
@@ -66,20 +65,7 @@ const TextPost: FunctionComponent<TextPostProps> = ({
           <div className="icon-profile">
             <AstronautIcon width="23.815" height="27.218" fill="#328bd2" />
           </div>
-          <div className="bar-icon">
-            <RainbowIcon
-              widthSvg="auto"
-              heightSvg="auto"
-              widthWakes="150"
-              heightOne="13"
-              heightTwo="8"
-              heightThree="3"
-              fillOne="#328bd2"
-              fillTwo="#d33682"
-              fillThree="#eee8d5"
-              viewBox="0 0 20 130"
-            />
-          </div>
+          <div className="bar-icon"></div>
         </div>
 
         {children}
