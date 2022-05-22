@@ -28,12 +28,13 @@
     }
   }
   &.column {
-    flex-direction: column;
+    display: block;
     width: auto;
     .container {
       height: auto;
       width: 100%;
       grid-gap: 15px;
+      display: block;
       .card-posts {
         grid-column: 1;
       }
