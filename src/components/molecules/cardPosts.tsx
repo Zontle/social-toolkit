@@ -37,6 +37,10 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
   const _renderAttachments = () => {
     return attachments?.map((attachment, i) => {
       if (attachment?.type === 'image') {
+        //TODO Add carousel view
+        if (i >= 1) {
+          return <div key={i}></div>
+        }
         return (
           <div className="post-files" key={i}>
             <img alt="img" src={attachment?.url} />
