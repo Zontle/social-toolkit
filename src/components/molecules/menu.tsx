@@ -65,7 +65,12 @@ const Menu: FunctionComponent<MenuProps> = ({
               </div>
               <div className="bottom-sidebar">
                 {bottomIcons?.length && (
-                  <div className="icon">{bottomIcons.map(x => x.icon)}</div>
+                  <div
+                    className={`icon  ${active === 'settings' ? 'active' : ''}`}
+                    onClick={() => onChange('settings')}
+                  >
+                    {bottomIcons.map(x => x.icon)}
+                  </div>
                 )}
               </div>
             </div>
