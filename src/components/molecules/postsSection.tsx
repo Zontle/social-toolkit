@@ -9,6 +9,7 @@ export interface PostsSectionProps {
   children?: React.ReactNode;
   noIcons?: boolean;
   className?: string;
+  customIcon?: React.ReactNode;
 }
 
 export const PostsSection: FunctionComponent<PostsSectionProps> = ({
@@ -16,7 +17,8 @@ export const PostsSection: FunctionComponent<PostsSectionProps> = ({
   children,
   type = 'column',
   noIcons = false,
-  className = ''
+  className = '',
+  customIcon
 }) => {
   if (type === 'row') {
     return (
@@ -25,11 +27,12 @@ export const PostsSection: FunctionComponent<PostsSectionProps> = ({
       </div>
     );
   }
+  const Icon: React.ReactNode = customIcon || <IconMenuPostSection size="2x" />;
   return (
     <div className={`post-section ${className} ${type}`}>
       <div className="top-post">
         {title && <h1>{title}</h1>}
-        {!noIcons && <IconMenuPostSection size="2x" />}
+        {!noIcons && Icon}
       </div>
       <div className="container">{children}</div>
     </div>

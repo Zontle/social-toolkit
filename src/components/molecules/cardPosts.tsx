@@ -17,9 +17,10 @@ export interface CardPostsProps {
   user: string;
   username: string;
   attachments?: Array<Attachment>;
-  content: string;
+  content: string | React.ReactNode;
   publishTime: React.ReactNode | Dayjs | string;
   active?: boolean;
+  noActions?: boolean;
 }
 const CHAR_CONTENT_LIMIT = 280;
 dayjs.extend(relativeTime);
@@ -30,7 +31,8 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
   attachments = [],
   content,
   publishTime,
-  active = false
+  active = false,
+  noActions = false
 }) => {
   const _renderAttachments = () => {
     return attachments?.map((attachment, i) => {
@@ -72,7 +74,7 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
           <div>{_parseContent()}</div>
         </div>
       </div>
-      <div className="icons">
+      {!noActions &&  <div className="icons">
         <div className="left-bottom-card">
           <HeartIcon
             width="17.5"
@@ -98,7 +100,9 @@ export const CardPosts: FunctionComponent<CardPostsProps> = ({
         <div className="icon-menu">
           <IconMenu />
         </div>
-      </div>
+
+      </div>}
+
     </Card>
   );
 };
