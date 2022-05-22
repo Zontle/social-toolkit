@@ -34,7 +34,7 @@
       height: auto;
       width: 100%;
       grid-gap: 15px;
-      display: block;
+      flex-direction: column;
       .card-posts {
         grid-column: 1;
       }
