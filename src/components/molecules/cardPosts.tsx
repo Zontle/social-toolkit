@@ -18,7 +18,7 @@ export interface CardPostsProps {
   username: string;
   attachments?: Array<Attachment>;
   content: string | React.ReactNode;
-  publishTime: React.ReactNode | Dayjs | string;
+  publishTime: React.ReactNode | Dayjs | string | Date;
   active?: boolean;
   noActions?: boolean;
 }
