@@ -18,7 +18,7 @@
         max-width: 780px;
       }
     }
-    @media screen and (max-width: 600px) {
+    @include responsive(tablet){
       .text-title,
       .trending {
         width: 100%;
