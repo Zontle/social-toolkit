@@ -36,9 +36,9 @@ const Menu: FunctionComponent<MenuProps> = ({
           />
         </header>
         <main>{children}</main>
-        <div className={`sidebar-drawer ${visible ? 'visible' : ''}`}>
+        <div className={`sidebar-drawer ${visible ? 'visible' : 'hidden'}`}>
           <div className="cover" onClick={() => setVisible(false)}></div>
-          <div className="container-menu slideInLeft">
+          <div className="container-menu">
             <div className="sidebar-navigation">
               <div className="top-sidebar">
                 <div className="detail-top-icon">

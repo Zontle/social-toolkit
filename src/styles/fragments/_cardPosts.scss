@@ -9,7 +9,7 @@
       grid-row: 3/4;
     }
     .post-content {
-      height: 95%;
+      height: 90%;
     }
   }
   &.large {
@@ -17,6 +17,7 @@
   }
   .post-content {
     height: calc(90% - 15px);
+    word-break: break-all;
   }
   .username-publish-time {
     display: flex;
@@ -33,14 +34,14 @@
     .post-files {
       img {
         border-radius: 10px;
-        margin: 10px;
-        width: 90%;
+        margin: 10px 0px;
+        width: 100%;
       }
     }
   }
 
   .username {
-    color: #d33682;
+    color: $pink;
     font-size: 14px;
   }
 

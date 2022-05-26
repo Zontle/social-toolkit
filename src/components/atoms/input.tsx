@@ -10,6 +10,7 @@ export interface InputProps {
   onChange?: ChangeEventHandler<any>;
   placeholder?: string;
   normalized?: boolean;
+  value?: string;
 }
 const Input: FunctionComponent<InputProps> = ({
   children,
@@ -18,6 +19,7 @@ const Input: FunctionComponent<InputProps> = ({
   size = 'normal',
   placeholder,
   normalized = false,
+  value = '',
   onChange
 }) => {
   if (type === 'textarea') {
@@ -27,6 +29,7 @@ const Input: FunctionComponent<InputProps> = ({
           normalized && 'normalized'
         }`}
         onChange={onChange}
+        value={value}
         placeholder={placeholder}
       >
         {children}
@@ -40,6 +43,7 @@ const Input: FunctionComponent<InputProps> = ({
       }`}
       placeholder={placeholder}
       onChange={onChange}
+      value={value}
     >
       {children}
     </input>

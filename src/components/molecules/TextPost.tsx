@@ -78,6 +78,7 @@ const TextPost: FunctionComponent<TextPostProps> = ({
           className="text-input"
           placeholder={placeholder}
           onChange={_handleSetText}
+          value={text}
         />
         <div className="images-container">{_renderImageList()}</div>
         <div className="triggers">
