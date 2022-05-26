@@ -4,10 +4,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { PostsSection } from '../components/molecules/postsSection';
 
-import '../styles/fragments/_postSection.scss';
-import '../styles/fragments/_cardPosts.scss';
 import { CardPosts } from '../components/molecules/cardPosts';
-
+import '../styles/main.scss';
 export default {
   title: 'Poster/PostsSection',
   component: PostsSection

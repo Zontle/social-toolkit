@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { CardPosts } from '../components/molecules/cardPosts';
 
-import '../styles/fragments/_cardPosts.scss';
+import '../styles/main.scss';
 
 export default {
   title: 'Poster/CardPost',

@@ -10,7 +10,7 @@ import {
   Wake
 } from '../constants';
 
-import '../styles/fragments/_menu.scss';
+import '../styles/main.scss';
 
 export default {
   title: 'Poster/Menu',

@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import TextPost from '../components/molecules/TextPost';
 
-import '../styles/fragments/_textPost.scss';
+import '../styles/main.scss';
 
 export default {
   title: 'Poster/PostsSection',
