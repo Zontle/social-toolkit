@@ -44,9 +44,7 @@
             padding-bottom: 30px;
             .center-sidebar-element {
               cursor: pointer;
-              svg {
-                padding: 10px;
-              }
+              padding: 10px;
               &:not(&.icon-plus):hover,
               &.active {
                 background-color: #328bd2;
